@@ -25,7 +25,6 @@ public class UrlController {
     public ResponseEntity<?> get(HttpServletRequest httpServletRequest) throws ExecutionException, InterruptedException {
         String shortUrl = httpServletRequest.getRequestURI().substring(1);
         logger.info(shortUrl);
-        System.out.println(shortUrl);
         if(shortUrl.isBlank()){
             logger.info(" no url ");
             return ResponseEntity.badRequest().body("no url");
